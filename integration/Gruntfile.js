@@ -218,9 +218,9 @@ module.exports = function(grunt) {
         'imagemin'
     ]);
 
-    grunt.registerTask('drupal', [
+    grunt.registerTask('cms', [
         'build',
-        'copy:drupal'
+        'copy:cms'
     ]);
 
     grunt.registerTask("git", function(msg, branch) {
