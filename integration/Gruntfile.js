@@ -201,7 +201,7 @@ module.exports = function(grunt) {
         'copy:main',
         'bower',
         'jade',
-        'recess:lint',
+        // 'recess:lint', // Too warnings with less bootstrap ...
         'recess:dist',
         'jshint',
         'browser_sync',
