@@ -66,29 +66,29 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            main: {
-                fonts: {
-                    src: '<%= src.fonts %>/**/*.*',
-                    dest: '<%= dist.path %>/'
-                },
-                js: {
-                    src: '<%= src.js %>/**/*.*',
-                    dest: '<%= dist.path %>/'
-                },
-                vendors: {
-                    src: '<%= src.vendors %>/**/*.*',
-                    dest: '<%= dist.path %>/'
-                },
-                images: {
-                    src: '<%= src.images %>/*.*',
-                    dest: '<%= dist.path %>/'
-                }
+            fonts: {
+                src: '<%= src.fonts %>/**/*.*',
+                dest: '<%= dist.path %>/'
+            },
+            js: {
+                src: '<%= src.js %>/**/*.*',
+                dest: '<%= dist.path %>/'
+            },
+            vendors: {
+                src: '<%= src.vendors %>/**/*.*',
+                dest: '<%= dist.path %>/'
             },
             cms: {
                 expand: true,
                 cwd: '<%= dist.css %>/',
                 src: '*.*',
                 dest: '<%= poly.cmsPath %><%= poly.cmsCss %>'
+            },
+            images: {
+                expand: true,
+                cwd: '<%= src.images %>',
+                src: ['**/*.{png,jpg,gif}'],
+                dest: '<%= dist.images %>'
             }
         },
 
@@ -113,12 +113,13 @@ module.exports = function(grunt) {
         recess: {
             lint: {
                 files: {
-                    '<%= dist.css %>style.css': ['<%= src.less %>style.less']
+                    '<%= dist.css %>style.css': ['<%= src.less %>**/*.less']
                 }
             },
             dist: {
                 options: {
-                    compile: true
+                    compile: true,
+                    includePath: ['<%= src.less %>modules/']
                 },
                 files: {
                     '<%= dist.css %>style.css': ['<%= src.less %>style.less']
@@ -127,7 +128,8 @@ module.exports = function(grunt) {
             build: {
                 options: {
                     compile: true,
-                    compress: true
+                    compress: true,
+                    includePath: ['<%= src.less %>modules/']
                 },
                 files: {
                     '<%= dist.css %>style.css': ['<%= src.less %>style.less']
@@ -152,7 +154,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= src.images %>',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: '<%= dist.path %>'
+                    dest: '<%= dist.images %>'
                 }]
             }
         },
@@ -198,10 +200,13 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
         'clean',
-        'copy:main',
+        'copy:images',
+        'copy:fonts',
+        'copy:js',
+        'copy:vendors',
         'bower',
         'jade',
-        // 'recess:lint', // Too warnings with less bootstrap ...
+        // 'recess:lint',
         'recess:dist',
         'jshint',
         'browser_sync',
@@ -210,7 +215,8 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        'copy:main',
+        'copy:fonts',
+        'copy:vendors',
         'bower',
         'jade',
         'recess:build',
