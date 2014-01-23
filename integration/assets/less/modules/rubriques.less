@@ -1,0 +1,44 @@
+// Mobile
+// =====================================
+
+.rubriques {
+    margin-top: @baseline*2;
+    margin-bottom: @baseline*2.5;
+    padding: @baseline;
+
+    h1 {
+        line-height: 40px;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        .ttu();
+        a { text-decoration: none; }
+    }
+}
+
+// Desktop
+// =====================================
+
+@media (min-width: @screen-tablet) {
+    .rubriques {
+        .marge();
+        margin-top: @baseline*2;
+        margin-bottom: @baseline*2.5;
+
+        h1 {
+            line-height: 40px;
+        }
+        ul {
+            padding: 0;
+        }
+        li {
+            list-style-type: none;
+            .ttu();
+            a { text-decoration: none; }
+        }
+
+    }
+}

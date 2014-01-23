@@ -1,0 +1,29 @@
+{
+  "name": "site name",
+  "version": "0.0.1",
+  "description": "A website",
+  "main": "./dist/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Les Polypodes",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jade": "~0.8.0",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-uncss": "~0.1.6",
+    "grunt-recess": "~0.5.0",
+    "grunt-bower": "~0.7.0",
+    "recess": "~1.1.9",
+    "grunt-browser-sync": "~0.5.2"
+  }
+}

@@ -1,0 +1,93 @@
+// override demo.css in vendor snap.js folder
+
+.snap-drawer li > a {
+    margin-left: @baseline;
+    padding: @baseline/2;
+    padding-left: 0;
+    text-indent: 0;
+    text-shadow: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: @red;
+    text-decoration: none;
+    .ttu;
+}
+
+.snap-drawer-left {
+    border-right: 2px solid @l-grey;
+}
+
+
+// Icone Home
+
+.snap-drawer {
+    position: fixed;
+    z-index: 100;
+    overflow: auto;
+    height: 100%;
+    width: 280px;
+    .transform(translate3d(-100%, 0, 0));
+    .transition(500ms);
+    -webkit-backface-visibility: hidden;
+
+    &.visible {
+        .transform(translate3d(0, 0, 0));
+        -webkit-backface-visibility: hidden;
+    }
+
+    // header menu mobile
+    .top-menu {
+        height: @baseline*4;
+        padding-top: 10px;
+
+        li {
+            display: inline-block;
+        }
+
+        .home a {
+            display: inline-block;
+            vertical-align: bottom;
+            margin: 0 @baseline;
+            margin-top: @baseline;
+            width: @baseline*1.5;
+            height: @baseline*1.5;
+            background: url('../assets/image/sprite.png') no-repeat;
+            background-position: -6px -6px;
+            border: 0;
+        }
+
+        .contact a {
+            display: inline-block;
+            vertical-align: bottom;
+            text-align: center;
+            padding: @baseline/4 0;
+            background: @l-grey;
+            width: 146px;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            border: 0;
+            .ttu;
+        }
+    }
+
+    .sub-menu {
+        background: @red;
+
+        a {
+            color: @blanc;
+            border: 0;
+            font-size: 14px;
+            padding: 7px;
+        }
+     }
+}
+
+.snap-content {
+    .transition(500ms);
+    -webkit-backface-visibility: hidden;
+    &.visible {
+        .transform(translate3d(280px, 0, 0));
+        -webkit-backface-visibility: hidden;
+    }
+}

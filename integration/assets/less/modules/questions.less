@@ -1,0 +1,111 @@
+//
+// Module chiffres
+// ==========================================================================
+
+// Mobile
+// =====================================
+
+.questions {
+    text-align: center;
+    color: @blanc;
+    background-color: @l-grey;
+
+    a:hover { text-decoration: none; }
+
+    &-title {
+        height: @baseline*2;
+        line-height: @baseline*2.5;
+        font-family: sansation, sans-serif;
+        font-size: 22px;
+        background-color: @red;
+        a {
+            color: @blanc;
+        }
+
+        a:hover {
+            color: darken(@blanc, 10%);
+        }
+    }
+
+    &-arrow {
+        width: 300px;
+        height: @baseline*1.5;
+        margin: 0 auto;
+        background: url('../assets/image/sprite.png') no-repeat;
+        background-position: -470px 0px;
+        margin-top: -2px;
+    }
+
+    &-content {
+        color: @d-grey;
+        height: @baseline*3;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        p { margin: 0; }
+    }
+
+    &-content-highlight {
+        color: @red;
+    }
+}
+
+// Tablet
+// =====================================
+
+@media (min-width: @screen-tablet) {
+    .questions {
+        margin: 0 auto;
+        width: @screen-tablet;
+
+        &-container {
+            background-color: @red;
+            .gradient-horizontal(@red, @l-grey, 50%, 50%);
+        }
+        &-title {
+            float: left;
+            height: @baseline*4;
+            line-height: @baseline*4;
+            width: @baseline*15;
+        }
+
+        // arrow >
+        &-title:after {
+            display: inline-block;
+            float: right;
+            content: ' ';
+            width: 0;
+            height: 0;
+            border-top: 40px solid @l-grey;
+            border-bottom: 40px solid @l-grey;
+
+            border-left: 40px solid @red;
+        }
+
+        // arrow ^
+        &-arrow {
+            display: none;
+        }
+
+        &-content {
+            height: @baseline*4;
+            line-height: @baseline*4;
+            font-size: 17px;
+        }
+    }
+}
+
+// Desktop
+// =====================================
+
+@media (min-width: @screen-desktop) {
+    .questions {
+        margin: 0 auto;
+        width: @screen-desktop;
+
+        &-content {
+            height: @baseline*4;
+            line-height: @baseline*4;
+            font-size: 24px;
+        }
+    }
+}

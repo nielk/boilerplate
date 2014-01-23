@@ -1,0 +1,149 @@
+
+// Mobile
+// =====================================
+
+.temoignage {
+    display: block;
+    max-width: 1140px;
+    text-align: center;
+    margin: 0 auto;
+
+    &-container {
+        background-color: @ul-grey;
+    }
+
+    &-box {
+        max-width : 570px;
+        margin: 0 auto;
+        margin-top: @baseline;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        margin-bottom: -@baseline*1.25;
+    }
+
+    // Sprite : première image
+    .first {
+        background-position: 0% top;
+        background-size: 200%;
+    }
+
+    // Sprite : second image
+    .last {
+        background-position: 100% top;
+        background-size: 200%;
+    }
+
+    &-heading {
+        font-size: 14px;
+        font-weight: 300;
+        .ttu;
+    }
+
+    &-rubrique {
+        position: relative;
+        margin: 0 auto;
+        width: 250px;
+        height: @baseline*2.5;
+        line-height: @baseline*2.5;
+        background-color: @l-grey
+    }
+
+    &-title {
+        margin-top: @baseline*4;
+        margin: 0 auto;
+        padding: 0 @baseline;
+    }
+
+    &-desc {
+        display: block;
+        margin-bottom: 0;
+        margin-top: @baseline;
+        margin-bottom: @baseline/2;
+        font-size: 28px;
+        line-height: 28px;
+        font-family: sansation, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+        color: @red;
+        a:hover { text-decoration: none;}
+    }
+
+    &-text {
+        margin: 0 auto;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        padding: 0 @baseline;
+    }
+}
+
+// >Tablet
+// =====================================
+
+@media (min-width: @screen-tablet) {
+
+    .temoignage {
+        &-heading {
+            font-size: 16px;
+        }
+
+        &-desc {
+            font-size: 36px;
+            line-height: @baseline*2;
+            margin: 0;
+            padding: @baseline 0;
+        }
+
+        &-title {
+            padding: 0 @baseline*3;
+        }
+    }
+}
+
+// Breakpoint for border
+// =====================================
+
+@media (min-width: 1140px) {
+    .temoignage {
+        .border {
+            border-right: 1px solid @color-border;
+        }
+    }
+}
+
+// Large Desktop
+// =====================================
+
+@media (min-width: @screen-lg) {
+    .temoignage {
+
+        &-box {
+            display: block;
+            width : 570px;
+            margin: 0 auto;
+            margin-top: @baseline;
+            float: left;
+        }
+
+        &-desc {
+            margin: 0;
+            margin-top: @baseline*3;
+            padding-bottom: @baseline;
+        }
+
+        &-title, &-text {
+            padding: 0 @baseline*3;
+        }
+
+        &-text {
+            margin-top: -@baseline;
+            padding-top: @baseline;
+        }
+    }
+}

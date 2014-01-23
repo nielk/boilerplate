@@ -1,0 +1,192 @@
+// //    __               ___      _                       _
+// //   / /  ___  ___    / _ \___ | |_   _ _ __   ___   __| | ___  ___
+// //  / /  / _ \/ __|  / /_)/ _ \| | | | | '_ \ / _ \ / _` |/ _ \/ __|
+// // / /__|  __/\__ \ / ___/ (_) | | |_| | |_) | (_) | (_| |  __/\__ \
+// // \____/\___||___/ \/    \___/|_|\__, | .__/ \___/ \__,_|\___||___/
+// //                                |___/|_|
+
+
+// //
+// // Constantes
+// // ==========================================================================
+
+// // Heurus Colors
+// // =====================================
+
+// // Heurus red
+// @red:     #B01B26;
+// @blanc:   #FFFFFF;
+// // Greys
+// // Dark
+// @d-grey:  #394145;
+// // Medium
+// @m-grey:  #85878B;
+// // Light
+// @l-grey:  #DBDBDD;
+
+// // Grey used as background of the page
+// @ul-grey: #F7F7F7;
+
+
+// @color-border: #979797;
+
+// // Common colors
+// // =====================================
+// @link: @red;
+// @link-hover: darken(@red, 10%);
+// @text: @d-grey;
+
+// //
+// // Imports
+// // ==========================================================================
+
+// // Normalize
+// // =====================================
+// // @import "../../bower_components/normalize-less/normalize.less";
+
+// // Bootstrap
+// // =====================================
+
+// // Core variables and mixins
+// @import "../../bower_components/bootstrap/less/variables.less";
+// @import "../../bower_components/bootstrap/less/mixins.less";
+
+// // // Reset
+// // @import "../../app/bower_components/bootstrap/less/normalize.less";
+// // @import "../../app/bower_components/bootstrap/less/print.less";
+
+// // // Core CSS
+// @import "../../bower_components/bootstrap/less/scaffolding.less";
+// // @import "../../app/bower_components/bootstrap/less/type.less";
+// // @import "../../app/bower_components/bootstrap/less/code.less";
+// @import "../../bower_components/bootstrap/less/grid.less";
+// @import "../../bower_components/bootstrap/less/tables.less";
+// @import "../../bower_components/bootstrap/less/forms.less";
+// @import "../../bower_components/bootstrap/less/buttons.less";
+
+// // // Components
+// // @import "../../app/bower_components/bootstrap/less/component-animations.less";
+// // @import "../../app/bower_components/bootstrap/less/glyphicons.less";
+// // @import "../../app/bower_components/bootstrap/less/dropdowns.less";
+// // @import "../../app/bower_components/bootstrap/less/button-groups.less";
+// @import "../../bower_components/bootstrap/less/input-groups.less";
+// // @import "../../app/bower_components/bootstrap/less/navs.less";
+// // @import "../../app/bower_components/bootstrap/less/navbar.less";
+// // @import "../../app/bower_components/bootstrap/less/breadcrumbs.less";
+// // @import "../../app/bower_components/bootstrap/less/pagination.less";
+// // @import "../../app/bower_components/bootstrap/less/pager.less";
+// // @import "../../app/bower_components/bootstrap/less/labels.less";
+// // @import "../../app/bower_components/bootstrap/less/badges.less";
+// // @import "../../app/bower_components/bootstrap/less/jumbotron.less";
+// // @import "../../app/bower_components/bootstrap/less/thumbnails.less";
+// // @import "../../app/bower_components/bootstrap/less/alerts.less";
+// // @import "../../app/bower_components/bootstrap/less/progress-bars.less";
+// // @import "../../app/bower_components/bootstrap/less/media.less";
+// // @import "../../app/bower_components/bootstrap/less/list-group.less";
+// // @import "../../app/bower_components/bootstrap/less/panels.less";
+// // @import "../../app/bower_components/bootstrap/less/wells.less";
+// // @import "../../app/bower_components/bootstrap/less/close.less";
+
+// // // Components w/ JavaScript
+// // @import "../../app/bower_components/bootstrap/less/modals.less";
+// // @import "../../app/bower_components/bootstrap/less/tooltip.less";
+// // @import "../../app/bower_components/bootstrap/less/popovers.less";
+// @import "../../bower_components/bootstrap/less/carousel.less";
+
+// // // Utility classes
+// @import "../../bower_components/bootstrap/less/utilities.less";
+// @import "../../bower_components/bootstrap/less/responsive-utilities.less";
+
+
+// // Modules
+// // =====================================
+// @import "./modules/header.less";
+// @import "./modules/footer.less";
+// @import "./modules/responsive.less";
+// @import "./mixins.less";
+
+// //elements
+// @import "./button.less";
+// @import "./menu-mobile.less";
+
+// @import "./modules/rte.less";
+// @import "./modules/questions.less";
+// @import "./modules/chiffres.less";
+// @import "./modules/rubriques.less";
+// @import "./modules/resident.less";
+// @import "./modules/temoignage.less";
+// @import "./modules/locataire.less";
+// @import "./modules/breadcrumb.less";
+
+// //
+// // Grid settings
+// // ==========================================================================
+
+// @baseline: 20px;
+// @grid-columns: 12;
+// @grid-gutter-width: 30px;
+
+// //
+// // Mediaqueries
+// // ==========================================================================
+
+
+// //
+// // Tags, fonts, types and commons settings
+// // ==========================================================================
+
+// // Fonts
+// // =====================================
+// @import "fonts";
+
+// // Tags
+// // =====================================
+
+// html { background-color: @ul-grey; }
+// body {
+//     color: @d-grey;
+//     font-family: 'Roboto Condensed', sans-serif;
+//     font-size: 16px;
+// }
+// a {
+//     color: @link;
+//     text-decoration: none;
+//     cursor: pointer;
+// }
+// a:visited {}
+// a:hover {
+//     color: @link-hover;
+//     text-decoration: underline;
+// }
+// address { font-style: normal; }
+
+// #content {
+//     background: @ul-grey !important;
+// }
+
+// abbr {
+//     border-bottom: none !important;
+// }
+
+// // Types
+// // =====================================
+// h1, h2, h3, h4, h5, h6 {
+//     font-family: 'sansation-light';
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+// .titre1 {
+//     font-family: 'sansation-light' !important;
+//     font-weight: 100;
+//     font-style: normal;
+// }
+
+// // Navigations
+// // =====================================
+
+// nav ul, .nav {
+//     padding: 0;
+//     letter-style: none;
+// }
+
