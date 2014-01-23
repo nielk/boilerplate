@@ -41,7 +41,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['<%= src.js %>/**/*.js'],
-                tasks: ['jshint', 'copy:main:js']
+                tasks: ['jshint', 'copy:js']
             }
         },
 
