@@ -1,5 +1,5 @@
 {
-  "name": "site name",
+  "name": "siteName",
   "version": "0.0.1",
   "description": "A website",
   "main": "./dist/index.html",
