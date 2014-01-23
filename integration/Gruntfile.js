@@ -113,7 +113,7 @@ module.exports = function(grunt) {
         recess: {
             lint: {
                 files: {
-                    '<%= dist.css %>main.css': ['<%= src.less %>style.less']
+                    '<%= dist.css %>style.css': ['<%= src.less %>style.less']
                 }
             },
             dist: {
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
                     compile: true
                 },
                 files: {
-                    '<%= dist.css %>main.css': ['<%= src.less %>style.less']
+                    '<%= dist.css %>style.css': ['<%= src.less %>style.less']
                 }
             },
             build: {
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 files: {
-                    '<%= dist.css %>main.css': ['<%= src.less %>style.less']
+                    '<%= dist.css %>style.css': ['<%= src.less %>style.less']
                 }
             }
         },
