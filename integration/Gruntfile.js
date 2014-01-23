@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             },
             less: {
                 files: ['<%= src.less %>/**/*.less'],
-                tasks: ['recess:lint', 'recess:dist']
+                tasks: ['recess:dist']
             },
             js: {
                 files: ['<%= src.js %>/**/*.js'],
