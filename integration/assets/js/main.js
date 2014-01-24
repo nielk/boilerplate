@@ -7,4 +7,14 @@ jQuery(document).ready(function ($) {
       return i * 2;
     };
 
+
+    /**
+     * SVG supported ?
+     */
+    // if (!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1")) {
+    //     $('img[src*="svg"]').attr('src', function() {
+    //         return $(this).attr('src').replace('.svg', '.png');
+    //     });
+    // }
+
 });
