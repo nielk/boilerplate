@@ -87,7 +87,13 @@ module.exports = function(grunt) {
             images: {
                 expand: true,
                 cwd: '<%= src.images %>',
-                src: ['**/*.{png,jpg,gif}'],
+                src: ['**/*.{png,jpg,gif,svg}'],
+                dest: '<%= dist.images %>'
+            },
+            svg: {
+                expand: true,
+                cwd: '<%= src.images %>',
+                src: ['**/*.svg'],
                 dest: '<%= dist.images %>'
             }
         },
@@ -217,6 +223,7 @@ module.exports = function(grunt) {
         'clean',
         'copy:fonts',
         'copy:vendors',
+        'copy:svg',
         'bower',
         'jade',
         'recess:build',
