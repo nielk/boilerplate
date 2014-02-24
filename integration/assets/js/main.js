@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
       return i * 2;
     };
 
+    foo();
 
     /**
      * SVG supported ?

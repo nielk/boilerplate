@@ -24,6 +24,12 @@
     "grunt-recess": "~0.5.0",
     "grunt-bower": "~0.7.0",
     "recess": "~1.1.9",
-    "grunt-browser-sync": "~0.5.2"
+    "grunt-browser-sync": "~0.5.2",
+    "gulp": "~3.5.2",
+    "browser-sync": "~0.6.1",
+    "gulp-less": "~1.2.1",
+    "gulp-jade": "~0.4.2",
+    "gulp-imagemin": "~0.1.5",
+    "gulp-uglify": "~0.2.1"
   }
 }
