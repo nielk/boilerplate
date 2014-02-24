@@ -37,7 +37,7 @@ module.exports = function(grunt) {
             },
             less: {
                 files: ['<%= src.less %>/**/*.less'],
-                tasks: ['recess:dist']
+                tasks: ['less:dist']
             },
             js: {
                 files: ['<%= src.js %>/**/*.js'],
@@ -116,32 +116,50 @@ module.exports = function(grunt) {
           }
         },
 
-        recess: {
-            lint: {
-                files: {
-                    '<%= dist.css %>style.css': ['<%= src.less %>**/*.less']
-                }
-            },
+        less: {
             dist: {
                 options: {
-                    compile: true,
-                    includePath: ['<%= src.less %>modules/']
                 },
                 files: {
-                    '<%= dist.css %>style.css': ['<%= src.less %>style.less']
+                    "<%= dist.css %>style.css": ["<%= src.less %>style.less"]
                 }
             },
             build: {
                 options: {
-                    compile: true,
-                    compress: true,
-                    includePath: ['<%= src.less %>modules/']
+                    compress: true
                 },
                 files: {
-                    '<%= dist.css %>style.css': ['<%= src.less %>style.less']
+                    "<%= dist.css %>style.css": ["<%= src.less %>style.less"]
                 }
             }
         },
+
+        // recess: {
+        //     lint: {
+        //         files: {
+        //             '<%= dist.css %>style.css': ['<%= src.less %>**/*.less']
+        //         }
+        //     },
+        //     dist: {
+        //         options: {
+        //             compile: true,
+        //             includePath: ['<%= src.less %>modules/']
+        //         },
+        //         files: {
+        //             '<%= dist.css %>style.css': ['<%= src.less %>style.less']
+        //         }
+        //     },
+        //     build: {
+        //         options: {
+        //             compile: true,
+        //             compress: true,
+        //             includePath: ['<%= src.less %>modules/']
+        //         },
+        //         files: {
+        //             '<%= dist.css %>style.css': ['<%= src.less %>style.less']
+        //         }
+        //     }
+        // },
 
         uglify: {
             my_target: {
@@ -213,7 +231,7 @@ module.exports = function(grunt) {
         'bower',
         'jade',
         // 'recess:lint',
-        'recess:dist',
+        'less:dist',
         'jshint',
         'browser_sync',
         'watch'
@@ -226,7 +244,7 @@ module.exports = function(grunt) {
         'copy:svg',
         'bower',
         'jade',
-        'recess:build',
+        'less:build',
         'uglify',
         'imagemin'
     ]);
