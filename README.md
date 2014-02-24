@@ -10,7 +10,7 @@ Dans une console :
 
 ## Gulp
 
-Gulp, come grunt est un _task runner_ utilisant node, à la différence de grunt gulp utilise les streams et a un syntaxe plus simple, plus d’infos : http://gulpjs.com/
+Gulp, comme grunt est un _task runner_ utilisant node, à la différence de grunt gulp utilise les streams et a un syntaxe plus simple, plus d’infos : http://gulpjs.com/
 
 ### Comment le lancer ?
 
