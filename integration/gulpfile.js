@@ -54,7 +54,9 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('dist/assets/fonts'));
 });
 
-// TODO : task cms
+/*
+ * Copy assets to CMS theme
+ */
 gulp.task('buildCMS', function() {
     gulp.src('dist/assets/**/*.*')
     .pipe(gulp.dest('../sites/all/themes/mytheme/assets'));
