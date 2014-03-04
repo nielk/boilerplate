@@ -84,7 +84,7 @@ gulp.task('imagemin', function() {
  * Watch tasks
  */
 gulp.task('watch', function() {
-    gulp.watch('assets/less/*.less', ['less']);
+    gulp.watch('assets/less/**/*.less', ['less']);
     gulp.watch('jades/**/*.jade', ['templates']);
     gulp.watch('assets/images/**/*.*', ['imagemin']);
     gulp.watch('assets/vendors/**/*.*', ['vendors']);
