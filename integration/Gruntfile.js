@@ -39,6 +39,10 @@ module.exports = function(grunt) {
                 files: ['<%= src.less %>/**/*.less'],
                 tasks: ['less:dist']
             },
+            lessdev: {
+                files: ['<%= src.less %>/**/*.less'],
+                tasks: ['less:build']
+            },
             js: {
                 files: ['<%= src.js %>/**/*.js'],
                 tasks: ['jshint', 'copy:js']
@@ -54,6 +58,23 @@ module.exports = function(grunt) {
                     watchTask: true,
                     server: {
                         baseDir: "<%= dist.path %>"
+                    },
+                    ghostMode: {
+                        clicks: true,
+                        scroll: true,
+                        links: true,
+                        forms: true
+                    }
+                }
+            },
+            cms: {
+                bsFiles: {
+                    src : ['<%= dist.css %>*.css', '<%= dist.path %>*.html']
+                },
+                options: {
+                    watchTask: true,
+                    server: {
+                        baseDir: "<%= poly.cmsPath %>"
                     },
                     ghostMode: {
                         clicks: true,
@@ -83,6 +104,12 @@ module.exports = function(grunt) {
                 cwd: '<%= dist.css %>/',
                 src: '*.*',
                 dest: '<%= poly.cmsPath %><%= poly.cmsCss %>'
+            },
+            dev: {
+                expand: true,
+                cwd: '<%= dist.assets %>/',
+                src: ['**/*.*', '!*.html'],
+                dest: '<%= poly.cmsPath %>'
             },
             images: {
                 expand: true,
@@ -129,7 +156,7 @@ module.exports = function(grunt) {
                     compress: true
                 },
                 files: {
-                    "<%= dist.css %>style.css": ["<%= src.less %>style.less"]
+                    "<%= poly.cmsPath %><%= poly.cmsCss %>style.css": ["<%= src.less %>style.less"]
                 }
             }
         },
@@ -246,28 +273,14 @@ module.exports = function(grunt) {
         'jade',
         'less:build',
         'uglify',
-        'imagemin'
+        'imagemin',
+        'copy:dev',
+        'watch:lessdev'
     ]);
 
     grunt.registerTask('cms', [
         'build',
         'copy:cms'
     ]);
-
-    grunt.registerTask("git", function(msg, branch) {
-        var done, doneFunction, options;
-        options = {
-            cmd: "make",
-            args: [msg, branch]
-        };
-        done = this.async();
-        doneFunction = function(error, result, code) {
-            grunt.log.write(error);
-            grunt.log.write(result);
-            grunt.log.write(code);
-            return done();
-        };
-        return grunt.util.spawn(options, doneFunction);
-    });
 
 };
