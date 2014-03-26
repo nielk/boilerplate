@@ -161,33 +161,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // recess: {
-        //     lint: {
-        //         files: {
-        //             '<%= dist.css %>style.css': ['<%= src.less %>**/*.less']
-        //         }
-        //     },
-        //     dist: {
-        //         options: {
-        //             compile: true,
-        //             includePath: ['<%= src.less %>modules/']
-        //         },
-        //         files: {
-        //             '<%= dist.css %>style.css': ['<%= src.less %>style.less']
-        //         }
-        //     },
-        //     build: {
-        //         options: {
-        //             compile: true,
-        //             compress: true,
-        //             includePath: ['<%= src.less %>modules/']
-        //         },
-        //         files: {
-        //             '<%= dist.css %>style.css': ['<%= src.less %>style.less']
-        //         }
-        //     }
-        // },
-
         uglify: {
             my_target: {
                 files: {
@@ -270,10 +243,10 @@ module.exports = function(grunt) {
         'copy:vendors',
         'copy:svg',
         'bower',
+        'imagemin',
         'jade',
         'less:build',
         'uglify',
-        'imagemin',
         'copy:dev',
         'watch:lessdev'
     ]);
