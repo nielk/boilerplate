@@ -66,23 +66,6 @@ module.exports = function(grunt) {
                         forms: true
                     }
                 }
-            },
-            cms: {
-                bsFiles: {
-                    src : ['<%= dist.css %>*.css', '<%= dist.path %>*.html']
-                },
-                options: {
-                    watchTask: true,
-                    server: {
-                        baseDir: "<%= poly.cmsPath %>"
-                    },
-                    ghostMode: {
-                        clicks: true,
-                        scroll: true,
-                        links: true,
-                        forms: true
-                    }
-                }
             }
         },
 
